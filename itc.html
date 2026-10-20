@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Palawan Paradise | El Nido Spots with Media</title>
+
+ 
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+   
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   
+
+  <style>
+
+    :root {
+
+      --primary-blue: #0077b6;
+
+      --deep-blue: #03045e;
+
+      --ocean-blue: #00b4d8;
+
+      --sky-blue: #90e0ef;
+
+      --light-bg: #f8f9fa;
+
+      --pure-white: #ffffff;
+
+      --text-dark: #212529;
+
+      --text-muted: #6c757d;
+
+    }
+
+
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    body {
+
+      font-family: 'Poppins', sans-serif;
+
+      background-color: var(--light-bg);
+
+      color: var(--text-dark);
+
+      line-height: 1.6;
+
+    }
+
+
+
+    header {
+
+      background-color: var(--pure-white);
+
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+    }
+
+
+
+    .nav-container {
+
+      max-width: 1200px;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 1rem 2rem;
+
+    }
+
+
+
+    .logo {
+
+      font-family: 'Playfair Display', serif;
+
+      font-size: 1.5rem;
+
+      font-weight: 700;
+
+      color: var(--deep-blue);
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.5rem;
+
+    }
+
+
+
+    .logo i {
+
+      color: var(--primary-blue);
+
+    }
+
+
+
+    .nav-links {
+
+      list-style: none;
+
+      display: flex;
+
+      gap: 2rem;
+
+    }
+
+
+
+    .nav-links a {
+
+      text-decoration: none;
+
+      color: var(--text-dark);
+
+      font-weight: 500;
+
+      transition: color 0.3s ease;
+
+      position: relative;
+
+    }
+
+
+
+    .nav-links a:hover, .nav-links a.active {
+
+      color: var(--primary-blue);
+
+    }
+
+
+
+    .nav-links a::after {
+
+      content: '';
+
+      position: absolute;
+
+      width: 0;
+
+      height: 2px;
+
+      bottom: -4px;
+
+      left: 0;
+
+      background-color: var(--primary-blue);
+
+      transition: width 0.3s ease;
+
+    }
+
+
+
+    .nav-links a:hover::after, .nav-links a.active::after {
+
+      width: 100%;
+
+    }
+
+
+
+    .hero {
+
+      position: relative;
+
+      height: 85vh;
+
+      background: linear-gradient(rgba(0, 119, 182, 0.4), rgba(3, 4, 94, 0.6)), url('https://images.unsplash.com/photo-1518509565180-87913364c2e6?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      color: var(--pure-white);
+
+      padding: 0 1rem;
+
+    }
+
+
+
+    .hero-content {
+
+      max-width: 800px;
+
+    }
+
+
+
+    .hero h1 {
+
+      font-family: 'Playfair Display', serif;
+
+      font-size: 3.5rem;
+
+      margin-bottom: 1rem;
+
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+    }
+
+
+
+    .hero p {
+
+      font-size: 1.25rem;
+
+      margin-bottom: 2rem;
+
+      font-weight: 300;
+
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+
+    }
+
+
+
+    .btn-primary {
+
+      display: inline-block;
+
+      background-color: var(--pure-white);
+
+      color: var(--primary-blue);
+
+      padding: 0.8rem 2rem;
+
+      border-radius: 50px;
+
+      font-weight: 600;
+
+      text-decoration: none;
+
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+      transition: all 0.3s ease;
+
+    }
+
+
+
+    .btn-primary:hover {
+
+      background-color: var(--primary-blue);
+
+      color: var(--pure-white);
+
+      transform: translateY(-2px);
+
+    }
+
+
+
+    .spots-section {
+
+      max-width: 1200px;
+
+      margin: 4rem auto;
+
+      padding: 0 2rem;
+
+    }
+
+
+
+    .section-title {
+
+      text-align: center;
+
+      margin-bottom: 3rem;
+
+    }
+
+
+
+    .section-title h2 {
+
+      font-family: 'Playfair Display', serif;
+
+      font-size: 2.5rem;
+
+      color: var(--deep-blue);
+
+      margin-bottom: 0.5rem;
+
+    }
+
+
+
+    .section-title p {
+
+      color: var(--text-muted);
+
+      font-size: 1rem;
+
+    }
+
+
+
+    .spots-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+      gap: 2.5rem;
+
+    }
+
+
+
+    article.spot-card {
+
+      background: var(--pure-white);
+
+      border-radius: 12px;
+
+      overflow: hidden;
+
+      box-shadow: 0 5px 20px rgba(0, 119, 182, 0.08);
+
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      border-top: 4px solid var(--primary-blue);
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+
+    article.spot-card:hover {
+
+      transform: translateY(-5px);
+
+      box-shadow: 0 8px 25px rgba(0, 119, 182, 0.15);
+
+    }
+
+
+
+    .media-container {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 0.5rem;
+
+      padding: 1rem;
+
+      background: #f1f5f9;
+
+    }
+
+
+
+    .spot-card img, .spot-card iframe {
+
+      width: 100%;
+
+      height: 200px;
+
+      object-fit: cover;
+
+      border-radius: 8px;
+
+      border: none;
+
+    }
+
+
+
+    .spot-content {
+
+      padding: 1.5rem;
+
+      display: flex;
+
+      flex-direction: column;
+
+      flex-grow: 1;
+
+    }
+
+
+
+    .spot-card h3 {
+
+      font-family: 'Playfair Display', serif;
+
+      font-size: 1.5rem;
+
+      color: var(--deep-blue);
+
+      margin-bottom: 0.75rem;
+
+    }
+
+
+
+    .spot-card p {
+
+      color: var(--text-muted);
+
+      font-size: 0.95rem;
+
+      margin-bottom: 1rem;
+
+      flex-grow: 1;
+
+    }
+
+
+
+    .spot-card figcaption {
+
+      font-size: 0.85rem;
+
+      color: var(--text-muted);
+
+      font-style: italic;
+
+      text-align: center;
+
+      margin-top: 0.25rem;
+
+    }
+
+
+
+    footer {
+
+      background-color: var(--deep-blue);
+
+      color: var(--pure-white);
+
+      text-align: center;
+
+      padding: 2rem;
+
+      margin-top: 4rem;
+
+    }
+
+
+
+    footer p {
+
+      font-size: 0.9rem;
+
+      opacity: 0.8;
+
+      margin-bottom: 0.3rem;
+
+    }
+
+
+
+    @media (max-width: 768px) {
+
+      .nav-links {
+
+        display: none; 
+
+      }
+
+      .hero h1 {
+
+        font-size: 2.5rem;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <header>
+
+    <div class="nav-container">
+
+      <div class="logo">
+
+        <i class="fa-solid fa-water"></i> El Nido Paradise
+
+      </div>
+
+      <nav>
+
+        <ul class="nav-links">
+
+          <li><a href="#home" class="active">Home</a></li>
+
+          <li><a href="#big-lagoon">Big Lagoon</a></li>
+
+          <li><a href="#secret-lagoon">Secret Lagoon</a></li>
+
+          <li><a href="#nacpan-beach">Nacpan Beach</a></li>
+
+          <li><a href="#seven-commandos">Seven Commandos</a></li>
+
+          <li><a href="#las-cabanas">Las Cabañas</a></li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+    <section id="home" class="hero">
+
+      <div class="hero-content">
+
+        <h1>Discover El Nido, Palawan</h1>
+
+        <p>Explore majestic limestone cliffs, crystal-clear emerald waters, and pristine tropical beaches voted among the finest in the world.</p>
+
+        <a href="#spots" class="btn-primary">Explore Spots</a>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="spots" class="spots-section">
+
+      <div class="section-title">
+
+        <h2>Top 5 Spots in El Nido</h2>
+
+        <p>Breathtaking destinations, photos, and video clips you must explore</p>
+
+      </div>
+
+
+
+      <div class="spots-grid">
+
+         
+
+        <!-- 1. Big Lagoon -->
+
+        <article class="spot-card" id="big-lagoon">
+
+          <div class="media-container">
+
+            <figure>
+
+              <img src="https://i.imgur.com/tvNMzQZ.jpeg" alt="Big Lagoon Scenery">
+
+              <figcaption>Photo: Big Lagoon Scenery</figcaption>
+
+            </figure>
+
+            <figure>
+
+              <iframe src="https://www.youtube.com/embed/kFTW9EnEX3o" title="Kayaking in Big Lagoon" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <figcaption>Video: Kayaking in Big Lagoon</figcaption>
+
+            </figure>
+
+          </div>
+
+          <div class="spot-content">
+
+            <h3>Big Lagoon</h3>
+
+            <p>The Big Lagoon is one of El Nido's crown jewels, framed by towering karst cliffs and shallow, tranquil water. It is a premier spot for kayaking and swimming amidst breathtaking scenery.</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 2. Secret Lagoon -->
+
+        <article class="spot-card" id="secret-lagoon">
+
+          <div class="media-container">
+
+            <figure>
+
+              <img src="https://i.imgur.com/EacGsJM.jpeg" alt="Secret Lagoon Entrance">
+
+              <figcaption>Photo: Secret Lagoon Entrance</figcaption>
+
+            </figure>
+
+            <figure>
+
+              <iframe src="https://www.youtube.com/embed/LaZ25cxHWxM" title="Exploring Secret Lagoon" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <figcaption>Video: Exploring Secret Lagoon</figcaption>
+
+            </figure>
+
+          </div>
+
+          <div class="spot-content">
+
+            <h3>Secret Lagoon</h3>
+
+            <p>Hidden behind a wall of majestic dark cliffs on Miniloc Island, the Secret Lagoon is accessed by squeezing through a small opening in the rocks, revealing a peaceful, enclosed pool.</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 3. Nacpan Beach -->
+
+        <article class="spot-card" id="nacpan-beach">
+
+          <div class="media-container">
+
+            <figure>
+
+              <img src="https://i.imgur.com/yB4cd1P.jpeg" alt="Nacpan Beach Coastline">
+
+              <figcaption>Photo: Nacpan Beach Coastline</figcaption>
+
+            </figure>
+
+            <figure>
+
+              <iframe src="https://www.youtube.com/embed/Rzqe5DN1s2o" title="Waves at Nacpan Beach" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <figcaption>Video: Waves at Nacpan Beach</figcaption>
+
+            </figure>
+
+          </div>
+
+          <div class="spot-content">
+
+            <h3>Nacpan Beach</h3>
+
+            <p>Nacpan Beach is a pristine, four-kilometer expanse of golden sand and swaying coconut palms. Known for its relaxed vibe and rolling waves, it is ideal for beach lounging and sunsets.</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 4. Seven Commandos Beach -->
+
+        <article class="spot-card" id="seven-commandos">
+
+          <div class="media-container">
+
+            <figure>
+
+              <img src="https://i.imgur.com/8Bn86lF.jpeg" alt="Tropical white sand beach with palm trees and sunbeds at Seven Commandos Beach">
+
+              <figcaption>Photo: Seven Commandos Shore</figcaption>
+
+            </figure>
+
+            <figure>
+
+              <iframe src="https://www.youtube.com/embed/BPsVoe8Zk4Y" title="Island Vibe at Seven Commandos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <figcaption>Video: Island Vibe at Seven Commandos</figcaption>
+
+            </figure>
+
+          </div>
+
+          <div class="spot-content">
+
+            <h3>Seven Commandos Beach</h3>
+
+            <p>Named after the seven commandos who once lived on the island, Seven Commandos features powdery white sand, crystal-clear water, and rope swings tied to coastal palm trees.</p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 5. Las Cabañas Beach -->
+
+        <article class="spot-card" id="las-cabanas">
+
+          <div class="media-container">
+
+            <figure>
+
+              <img src="https://i.imgur.com/eICYWwc.jpeg" alt="Golden hour sunset over the ocean with silhouette islands at Las Cabanas beach">
+
+              <figcaption>Photo: Sunset at Las Cabañas</figcaption>
+
+            </figure>
+
+            <figure>
+
+              <iframe src="https://www.youtube.com/embed/znezeAC-Vlc" title="Zipline & Sunset View" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <figcaption>Video: Zipline & Sunset View</figcaption>
+
+            </figure>
+
+          </div>
+
+          <div class="spot-content">
+
+            <h3>Las Cabañas Beach</h3>
+
+            <p>Las Cabañas Beach (Marimegmeg Beach) is famous for its vibrant beachfront bars, exciting zipline adventures between islands, and being a top sunset-watching location.</p>
+
+          </div>
+
+        </article>
+
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <footer>
+
+    <p>&copy; 2026 El Nido Travel Guide. All rights reserved.</p>
+
+    <p>Made with ❤️ for the Philippines &mdash; Group 3, IT101</p>
+
+  </footer>
+
+
+
+</body>
+
+</html>
+
